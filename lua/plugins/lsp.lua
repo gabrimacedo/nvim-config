@@ -78,7 +78,7 @@ return {
 
 				-- Fuzzy find all the symbols in your current workspace.
 				--  Similar to document symbols, except searches over your entire project.
-				map("<leader>ws", require("fzf-lua").lsp_live_workspace_symbols, "[W]orkspace [S]ymbols")
+				map("<leader>dws", require("fzf-lua").lsp_live_workspace_symbols, "[W]orkspace [S]ymbols")
 
 				-- Rename the variable under your cursor.
 				--  Most Language Servers support renaming across files, etc.
@@ -231,16 +231,16 @@ return {
 						diagnostics = {
 							globals = { "vim" },
 						},
-						workspace = {
-							-- maxPreload = 1000,
-							-- PreloadFileSize = 100,
-							library = {
-								vim.env.VIMRUNTIME, -- Core Neovim APIs
-								vim.fn.stdpath("config") .. "/lua", -- Your config
-								vim.fn.stdpath("data") .. "/lazy",
-							},
-							checkThirdParty = false,
-						},
+						-- workspace = {
+						-- 	-- maxPreload = 1000,
+						-- 	-- PreloadFileSize = 100,
+						-- 	library = {
+						-- 		vim.env.VIMRUNTIME, -- Core Neovim APIs
+						-- 		vim.fn.stdpath("config") .. "/lua", -- Your config
+						-- 		vim.fn.stdpath("data") .. "/lazy",
+						-- 	},
+						-- 	checkThirdParty = false,
+						-- },
 					},
 				},
 			},
